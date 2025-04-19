@@ -9,10 +9,10 @@ Nicolas Vladimir Gonzalez       *Legajo: 123456*
 import Main from './components/Main';
 
 // Fotos de perfil (IMPORTACIÓN DIRECTA DE IMÁGENES)
-import tito from './chavales/tito.png';
-import nicolas from './chavales/nico.jpg';
-import jorge from './chavales/joje.jpg';
-import tomas from './chavales/tomi.png';
+import fototito from './chavales/tito.png';
+import fotonicolas from './chavales/nico.jpg';
+import fotojorge from './chavales/joje.jpg';
+import fototomas from './chavales/tomi.png';
 
 import './Styles/App.css';
 
@@ -24,28 +24,28 @@ function App() {
       apellido: "Robles",
       legajo: 61315,
       github: "https://github.com/T1T0R",
-      foto: tito
+      foto: fototito
     },
     {
       nombre: "Nicolas",
       apellido: "Gonzalez",
       legajo: 123456,
-      github: "",
-      foto: nicolas
+      github: "https://github.com/VladGlpz78",
+      foto: fotonicolas
     },
     {
       nombre: "Tomas",
       apellido: "Jerez",
       legajo: 123456,
-      github: "",
-      foto: tomas
+      github: "https://github.com/ElTommmy",
+      foto: fototomas
     },
     {
       nombre: "Jorge",
       apellido: "Villagra",
       legajo: 123456,
-      github: "",
-      foto: jorge
+      github: "https://github.com/JorgeVillagraa",
+      foto: fotojorge
     }
   ];
 
