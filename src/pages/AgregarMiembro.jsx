@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
 
 export default function AgregarMiembro({ setIntegrantes }) {
   const [formData, setFormData] = useState({
@@ -37,7 +39,9 @@ export default function AgregarMiembro({ setIntegrantes }) {
   };
 
   return (
+
     <div className="p-6">
+      <Header/>
       <h2 className="text-xl mb-4">Sumate al equipo</h2>
       <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md">
         <input type="text" name="nombre" placeholder="Nombre" onChange={handleChange} required />
@@ -49,6 +53,7 @@ export default function AgregarMiembro({ setIntegrantes }) {
           Unirme al team 🚀
         </button>
       </form>
+      <Footer/>
     </div>
   );
 }

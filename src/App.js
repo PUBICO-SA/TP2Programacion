@@ -18,6 +18,7 @@ import fototito from './chavales/tito.png';
 import fotonicolas from './chavales/nico.jpg';
 import fotojorge from './chavales/joje.jpg';
 import fototomas from './chavales/tomi.png';
+import fotogabi from './chavales/gabi.JPG';
 
 import './Styles/App.css';
 
@@ -51,8 +52,15 @@ function App() {
       legajo: 123456,
       github: "https://github.com/JorgeVillagraa",
       foto: fotojorge
+    },
+    {
+      nombre:"Gabriel",
+      apellido:"Lescano",
+      legajo: 123456,
+      github:"",
+      foto:fotogabi
     }
-  ]);
+  ]); 
 
   return (
     <Routes>
