@@ -4,11 +4,16 @@ Thiago Benjamin Robles Cordoba  *Legajo: 61315*
 Tomas Javier Jerez              *Legajo: 123456*
 Nicolas Vladimir Gonzalez       *Legajo: 123456*
 */
+//Dependencias
+import { Routes, Route } from 'react-router-dom';
+import {useState} from 'react';
 
-//Componentes
-import Main from './components/Main';
+//Components
+import HomePages from './pages/HomePages';
+import NosotrosPages from './pages/NosotrosPages';
+import AgregarMiembro from './pages/AgregarMiembro';
 
-// Fotos de perfil (IMPORTACIÓN DIRECTA DE IMÁGENES)
+// Fotos de perfil
 import fototito from './chavales/tito.png';
 import fotonicolas from './chavales/nico.jpg';
 import fotojorge from './chavales/joje.jpg';
@@ -17,8 +22,8 @@ import fototomas from './chavales/tomi.png';
 import './Styles/App.css';
 
 function App() {
-
-  const Integrantes = [
+  
+  const [Integrantes,setIntegrantes]=useState([
     {
       nombre: "Thiago",
       apellido: "Robles",
@@ -47,12 +52,15 @@ function App() {
       github: "https://github.com/JorgeVillagraa",
       foto: fotojorge
     }
-  ];
+  ]);
 
   return (
-    <div>
-      <Main Integrantes={Integrantes} />
-    </div>
+    <Routes>
+      <Route path='/' element={<HomePages/>} />
+      <Route path='/agregarmiembro' element={<AgregarMiembro/>} />
+      <Route path='/nosotros' element={<NosotrosPages Integrantes={Integrantes} />} />
+      
+    </Routes>
   );
 }
 
