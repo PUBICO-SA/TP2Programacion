@@ -65,7 +65,7 @@ function App() {
   return (
     <Routes>
       <Route path='/' element={<HomePages/>} />
-      <Route path='/agregarmiembro' element={<AgregarMiembro/>} />
+      <Route path='/agregarmiembro' element={<AgregarMiembro setIntegrantes={setIntegrantes} />} />
       <Route path='/nosotros' element={<NosotrosPages Integrantes={Integrantes} />} />
       
     </Routes>
