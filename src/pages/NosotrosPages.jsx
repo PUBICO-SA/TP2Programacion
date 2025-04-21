@@ -8,8 +8,8 @@ export default function NosotrosPages({Integrantes}) {
   return (
     <>
       <Header />
-      <main className="p-6">
-        <h2 className="text-2xl mb-4">Conoce al equipo</h2>
+      <main>
+        <h2>Conoce al equipo</h2>
         <Main Integrantes={Integrantes}/>
       </main>
       <Footer />

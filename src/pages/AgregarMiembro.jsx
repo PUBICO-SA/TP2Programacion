@@ -48,17 +48,17 @@ export default function AgregarMiembro({ setIntegrantes }) {
   };
 
   return (
-    <div className="p-6">
+    <div>
       <Header />
-      <h2 className="text-xl mb-4">Sumate al equipo</h2>
+      <h2>Sumate al equipo</h2>
 
-      <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md">
+      <form onSubmit={handleSubmit} >
         <input type="text" name="nombre" placeholder="Nombre" onChange={handleChange} required />
         <input type="text" name="apellido" placeholder="Apellido" onChange={handleChange} required />
         <input type="number" name="legajo" placeholder="Legajo" onChange={handleChange} required />
         <input type="url" name="github" placeholder="URL de GitHub" onChange={handleChange} />
 
-        <label className="text-sm font-medium">Agregar foto</label>
+        <label>Agregar foto</label>
         <input type="file" accept="image/*" onChange={handleFile} />
 
         {preview && (
