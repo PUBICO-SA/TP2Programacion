@@ -1,4 +1,5 @@
 
+
 import Nosotros from '../components/Nosotros';
 
 export default function Main({ Integrantes }) {

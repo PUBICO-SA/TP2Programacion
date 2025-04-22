@@ -1,7 +1,6 @@
-
 export default function Nosotros({ integrantes }) {
   return (
-    <div>
+    <div className="nosotros">
       {integrantes.map((persona, index) => (
         <div key={index}>
           <img src={persona.foto} alt={persona.nombre} width={100} />

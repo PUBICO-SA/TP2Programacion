@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import "../Styles/AgregarMiembro.css";
 
 export default function AgregarMiembro({ setIntegrantes }) {
   const [formData, setFormData] = useState({
@@ -10,6 +11,7 @@ export default function AgregarMiembro({ setIntegrantes }) {
     legajo: '',
     github: '',
     foto: ''
+    
   });
 
   const [preview, setPreview] = useState(null);
@@ -48,17 +50,18 @@ export default function AgregarMiembro({ setIntegrantes }) {
   };
 
   return (
-    <div>
+    <div className="p-6">
       <Header />
-      <h2>Sumate al equipo</h2>
+      <div className='contenedor'>
+      <h2 className="text-xl mb-4">Sumate al equipo</h2>
 
-      <form onSubmit={handleSubmit} >
+      <form onSubmit={handleSubmit} className="flex flex-col gap-4 max-w-md">
         <input type="text" name="nombre" placeholder="Nombre" onChange={handleChange} required />
         <input type="text" name="apellido" placeholder="Apellido" onChange={handleChange} required />
         <input type="number" name="legajo" placeholder="Legajo" onChange={handleChange} required />
         <input type="url" name="github" placeholder="URL de GitHub" onChange={handleChange} />
 
-        <label>Agregar foto</label>
+        <label className="text-sm font-medium">Agregar foto</label>
         <input type="file" accept="image/*" onChange={handleFile} />
 
         {preview && (
@@ -73,7 +76,7 @@ export default function AgregarMiembro({ setIntegrantes }) {
           Unirme al team 🚀
         </button>
       </form>
-
+      </div>
       <Footer />
     </div>
   );

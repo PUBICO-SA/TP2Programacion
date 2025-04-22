@@ -1,0 +1,82 @@
+/* Estilo para el contenedor principal */
+.contenedor{
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9; /* Fondo gris claro */
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+/* Estilo para el título */
+.contenedor h2 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilo para el formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Estilo para los inputs */
+form input[type="text"],
+form input[type="number"],
+form input[type="url"],
+form input[type="file"] {
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="url"]:focus,
+form input[type="file"]:focus {
+    border-color: #6a11cb; /* Color de enfoque */
+    outline: none;
+}
+
+/* Estilo para el label */
+form label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #555;
+}
+
+/* Estilo para la imagen de vista previa */
+form img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+}
+
+/* Estilo para el botón */
+form button {
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    background-color: #6a11cb; /* Color principal */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #2575fc; /* Color más claro al pasar el mouse */
+    transform: scale(1.05);
+}

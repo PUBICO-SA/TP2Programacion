@@ -1,7 +1,7 @@
 // src/components/Header.jsx
 import React from 'react';
 import { Link } from 'react-router-dom';
-
+import "../Styles/Header.css"
 export default function Header() {
   return (
     <header className="p-4 bg-gray-200 flex justify-between">
