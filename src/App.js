@@ -2,7 +2,7 @@
 Jorge Sebastian Villagra        *Legajo: 123456*        
 Thiago Benjamin Robles Cordoba  *Legajo: 61315*
 Tomas Javier Jerez              *Legajo: 123456*
-Nicolas Vladimir Gonzalez       *Legajo: 123456*
+Vladimir Nicolas Gonzalez       *Legajo: 61463*
 */
 //Dependencias
 import { Routes, Route } from 'react-router-dom';
@@ -23,7 +23,7 @@ import fotogabi from './chavales/gabi.JPG';
 import './Styles/App.css';
 
 function App() {
-  
+
   const [Integrantes,setIntegrantes]=useState([
     {
       nombre: "Thiago",
@@ -35,7 +35,7 @@ function App() {
     {
       nombre: "Nicolas",
       apellido: "Gonzalez",
-      legajo: 123456,
+      legajo: 61463,
       github: "https://github.com/VladGlpz78",
       foto: fotonicolas
     },
@@ -62,6 +62,7 @@ function App() {
     }
   ]); 
 
+  
   return (
     <Routes>
       <Route path='/' element={<HomePages/>} />
@@ -70,6 +71,7 @@ function App() {
       
     </Routes>
   );
+  
 }
 
 export default App;

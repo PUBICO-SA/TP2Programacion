@@ -6,6 +6,7 @@ import Main from '../components/Main';
 
 export default function NosotrosPages({Integrantes}) {
   return (
+    <center>
     <>
       <Header />
       <main className="p-6">
@@ -14,5 +15,6 @@ export default function NosotrosPages({Integrantes}) {
       </main>
       <Footer />
     </>
+    </center>
   );
 }
