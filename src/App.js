@@ -1,8 +1,8 @@
 /*
-Jorge Sebastian Villagra        *Legajo: 123456*        
+Jorge Sebastian Villagra        *Legajo: 61725*        
 Thiago Benjamin Robles Cordoba  *Legajo: 61315*
-Tomas Javier Jerez              *Legajo: 123456*
-Nicolas Vladimir Gonzalez       *Legajo: 123456*
+Tomas Javier Jerez              *Legajo: 61805*
+Nicolas Vladimir Gonzalez       *Legajo: 61463*
 */
 //Dependencias
 import { Routes, Route } from 'react-router-dom';
