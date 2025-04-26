@@ -2,7 +2,9 @@
 
 *INTEGRANTES*
 
-Tomas Jerez
-Thiago Robles
-Nicolas Gonzalez
-Jorge Villagra
+<ul>
+  <li>Thiago Robles</li>
+  <li>Tomas Jerez</li>
+  <li>Nicolas Gonzalez</li>
+  <li>Jorge Villagra</li>
+</ul>
