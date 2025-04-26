@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
+import '../Styles/AgregarMiembro.css';
 
 export default function AgregarMiembro({ setIntegrantes }) {
   const [formData, setFormData] = useState({
@@ -37,42 +38,44 @@ export default function AgregarMiembro({ setIntegrantes }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     if (!formData.nombre || !formData.apellido || !formData.legajo) {
       alert('Por favor completá todos los campos obligatorios.');
       return;
     }
-
     setIntegrantes(prev => [...prev, formData]);
     navigate('/nosotros');
   };
 
   return (
-    <div>
+    <div className="agregar-miembro">
       <Header />
-      <h2>Sumate al equipo</h2>
+      
+      <div className="formulario-wrapper">
+        <div className="formulario">
+          <h2 className="titulo-formulario">Sumate al equipo 🚀</h2>
+          <form onSubmit={handleSubmit} className="formulario-contenido">
+            <input type="text" name="nombre" placeholder="Nombre" onChange={handleChange} required />
+            <input type="text" name="apellido" placeholder="Apellido" onChange={handleChange} required />
+            <input type="number" name="legajo" placeholder="Legajo" onChange={handleChange} required />
+            <input type="url" name="github" placeholder="URL de GitHub" onChange={handleChange} />
 
-      <form onSubmit={handleSubmit} >
-        <input type="text" name="nombre" placeholder="Nombre" onChange={handleChange} required />
-        <input type="text" name="apellido" placeholder="Apellido" onChange={handleChange} required />
-        <input type="number" name="legajo" placeholder="Legajo" onChange={handleChange} required />
-        <input type="url" name="github" placeholder="URL de GitHub" onChange={handleChange} />
+            <label className="subtitulo">Agregar foto</label>
+            <input type="file" accept="image/*" onChange={handleFile} />
 
-        <label>Agregar foto</label>
-        <input type="file" accept="image/*" onChange={handleFile} />
+            {preview && (
+              <img
+                src={preview}
+                alt="Vista previa"
+                className="preview-imagen"
+              />
+            )}
 
-        {preview && (
-          <img
-            src={preview}
-            alt="Vista previa"
-            style={{ width: '100px', height: '100px', objectFit: 'cover' }}
-          />
-        )}
-
-        <button type="submit">
-          Unirme al team 🚀
-        </button>
-      </form>
+            <button type="submit" className="boton-submit">
+              Unirme al team
+            </button>
+          </form>
+        </div>
+      </div>
 
       <Footer />
     </div>

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Evita el desplazamiento */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.agregar-miembro .formulario-wrapper,
+.agregar-miembro .formulario {
+    animation: fadeIn 0.7s ease-in-out;
+}
+
+.agregar-miembro {
+    min-height: 100vh;
+    background: url('../chavales/abue7.jpg') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+.formulario-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Elimina padding adicional */
+}
+
+.formulario {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    width: 400px;
+    color: #fff;
+    text-align: center;
+}
+
+.titulo-formulario {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.formulario-contenido input[type="text"],
+.formulario-contenido input[type="number"],
+.formulario-contenido input[type="url"],
+.formulario-contenido input[type="file"] {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px 15px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.formulario-contenido input::placeholder {
+    color: #ddd;
+}
+
+.subtitulo {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    text-align: left;
+}
+
+.preview-imagen {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 10px auto;
+}
+
+.boton-submit {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #fff;
+    border: none;
+    border-radius: 40px;
+    color: #333;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.boton-submit:hover {
+    background-color: #e0e0e0;
+}

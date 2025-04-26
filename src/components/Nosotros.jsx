@@ -1,15 +1,22 @@
-
 export default function Nosotros({ integrantes }) {
   return (
-    <div>
-      {integrantes.map((persona, index) => (
-        <div key={index}>
-          <img src={persona.foto} alt={persona.nombre} width={100} />
-          <h2>{persona.nombre} {persona.apellido}</h2>
-          <p>Legajo: {persona.legajo}</p>
-          {persona.github && <a href={persona.github}>GitHub</a>}
-        </div>
-      ))}
+    <div className="container">
+      <div className="card__container">
+        {integrantes.map((persona, index) => (
+          <article key={index} className="card__article">
+            <img src={persona.foto} alt={persona.nombre} className="card__img" />
+            <div className="card__data">
+              <h2 className="card__title">{persona.nombre} {persona.apellido}</h2>
+              <span className="card__description">Legajo: {persona.legajo}</span>
+              {persona.github && (
+                <a href={persona.github} target="_blank" rel="noopener noreferrer" className="card__button">
+                  GitHub
+                </a>
+              )}
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   );
 }

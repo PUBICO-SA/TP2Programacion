@@ -1,0 +1,12 @@
+/* Footer.css */
+footer {
+    background-color: rgb(164, 161, 161); /* Light gray background */
+    padding: 1rem; /* Padding around the content */
+    text-align: center; /* Center the text */
+    font-size: 0.875rem; /* Small font size */
+    color: #101010; /* Dark gray text color for contrast */
+}
+
+footer:hover {
+    background-color:rgb(148, 146, 146); /* Slightly darker gray on hover */
+}
