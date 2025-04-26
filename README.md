@@ -6,5 +6,5 @@
   <li>Jorge Villagra</li>
   <li>Tomas Jerez</li>
   <li>Nicolas Gonzalez</li>
-  <li>Ni</li>
+  <li>Thiago Robles</li>
 </ul>
